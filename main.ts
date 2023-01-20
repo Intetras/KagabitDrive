@@ -9,17 +9,17 @@ namespace kagabitdrive {
     }
 
     export enum brakeValue{
-        //% block="ON"
+        //% block="急ブレーキ"
         On = 1,
-        //% block="OFF"
+        //% block="ゆっくりブレーキ"
         Off = 0
     }
 
     let nowPower =[0,0];
     let nowBrake = brakeValue.Off
     DoubleMotor(0,0);
-    RServoAngle(90);
-    LServoAngle(90);
+    RServoAngle(0);
+    LServoAngle(0);
 
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
@@ -102,7 +102,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId="Set_brake"
-    //% block="ブレーキ %brake"
+    //% block="停まり方 %brake"
     export function setBrake(brake:brakeValue){
         nowBrake = brake;
         //basic.showNumber(nowBrake)
