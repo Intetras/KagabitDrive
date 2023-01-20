@@ -17,6 +17,9 @@ namespace kagabitdrive {
 
     let nowPower =[0,0];
     let nowBrake = brakeValue.Off
+    DoubleMotor(0,0);
+    RServoAngle(90);
+    LServoAngle(90);
 
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
